@@ -4,6 +4,8 @@ import DisplayMessages from './Components/DisplayMessages';
 import { useState } from 'react';
 import Input from './Components/Input';
 import { useEffect } from 'react';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 function randomName() {
   const adjectives = ["autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark", "summer", "icy", "delicate", "quiet", "white", "cool", "spring", "winter", "patient", "twilight", "dawn", "crimson", "wispy", "weathered", "blue", "billowing", "broken", "cold", "damp", "falling", "frosty", "green", "long", "late", "lingering", "bold", "little", "morning", "muddy", "old", "red", "rough", "still", "small", "sparkling", "throbbing", "shy", "wandering", "withered", "wild", "black", "young", "holy", "solitary", "fragrant", "aged", "snowy", "proud", "floral", "restless", "divine", "polished", "ancient", "purple", "lively", "nameless"];
@@ -24,7 +26,6 @@ export default function App() {
     username: randomName(),
     color: randomColor()
   });
-  console.log(messages);
 
   const [drone, setDrone] = useState(null);
 
@@ -44,6 +45,7 @@ export default function App() {
       room.on('data', (data, member) => {
         setMessages(messages => [...messages, {member, text: data}])
       })
+
     setDrone(drone);
   }, [])
 
@@ -55,9 +57,11 @@ export default function App() {
   }
 
   return (
-    <div className="App">
-      <DisplayMessages messages={messages} currentMember={member}/>
-      <Input onSendMessage={onSendMessage} />
-    </div>
+      <div className="App">
+        <Header />
+        <DisplayMessages messages={messages} currentMember={member}/>
+        <Input onSendMessage={onSendMessage} />
+        <Footer />
+      </div>
   );
 }

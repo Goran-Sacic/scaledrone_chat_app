@@ -5,23 +5,28 @@
   height: 100vh;
 }
 
-.App-header {
-  background-color: #262626;
-  overflow: visible;
-  width: 100%;
+.Header {
+  width: 100vw;
   text-align: center;
-  color: white;
+  color: rgb(8, 240, 228);
+  align-self: center;
 }
 
 .Messages-list {
-  padding: 20px 0;
+  padding: 5px 0;
   max-width: 900px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   list-style: none;
   padding-left: 0;
   flex-grow: 1;
   overflow: auto;
+  border-color: rgb(8, 240, 228);
+  border-style: solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.781);
 }
 
 .Messages-message {
@@ -48,13 +53,15 @@
   width: 35px;
   border-radius: 50%;
   display: inline-block;
-  margin: 0 10px -10px;
+  margin: 25px 10px -10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
 }
 
 .Message-content > .username {
   display: block;
-  color: gray;
+  color: rgb(8, 240, 228);
   font-size: 14px;
+  font-weight: bold;
   padding-bottom: 4px;
 }
 
@@ -63,13 +70,14 @@
   max-width: 400px;
   margin: 0;
   border-radius: 12px;
-  background-color: cornflowerblue;
-  color: white;
+  background-color: rgb(1, 0, 8);
+  color: rgb(255, 238, 0);
   display: inline-block;
 }
 
 .currentMember > .Message-content .text {
-  background-color: orangered;
+  background-color: rgba(0, 0, 0, 0.781);
+  color:rgb(255, 0, 221)
 }
 
 form {
@@ -81,19 +89,60 @@ form {
 }
 
 input {
+  margin-top: 15px;
   padding: 5px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid orangered;
+  font-size: 20px;
+  border-radius: 1px;
+  border: 2px solid rgb(0, 183, 255);
+  background-color: rgba(0, 0, 0, 0.781);
   flex-grow: 1;
+  color: rgba(255, 255, 255, 0.801);
 }
 
-button {
+input:focus {
+  outline: none;
+  border: 2px solid rgb(8, 240, 228);
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.button-active {
   padding: 5px 10px;
-  font-size: 16px;
-  background-color: orangered;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.801);
+  border: 2px solid rgb(8, 240, 228);
+  border-radius: 5px;
   margin-left: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  opacity: 100%;
+}
+
+.button-disabled {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.5);
+  
+  border: 2px solid rgb(0, 183, 255);
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 15px;
+  opacity: 100%;
+}
+
+.button-active:hover {
+  border: 2px solid rgb(8, 240, 228);
+  border-radius: 5px;
+  box-shadow: rgba(0, 252, 239, 0.397) 4px 4px 4px;
+  margin-top: 15px;
+  scale: 1.1;
+}
+
+.Footer {
+  text-align: center;
+  color: rgb(8, 240, 228);
 }
