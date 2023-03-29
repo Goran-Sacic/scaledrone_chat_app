@@ -24,3 +24,5 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+chat-app-function.rar

@@ -121,6 +121,33 @@ input:focus {
   opacity: 100%;
 }
 
+.button-active2 {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.801);
+  border: 2px solid rgb(8, 240, 228);
+  border-radius: 5px;
+  margin-left: 0px;
+  cursor: pointer;
+  margin-top: 0px;
+  opacity: 100%;
+  max-width: 100px;
+  align-self: center;
+}
+
+.button-active3 {
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.801);
+  border: 2px solid rgb(8, 240, 228);
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 100%;
+  align-self:center;
+  padding-left: 2px;
+}
+
 .button-disabled {
   padding: 5px 10px;
   font-size: 20px;
@@ -142,7 +169,81 @@ input:focus {
   scale: 1.1;
 }
 
+.button-active2:hover {
+  border: 2px solid rgb(8, 240, 228);
+  border-radius: 5px;
+  box-shadow: rgba(0, 252, 239, 0.397) 4px 4px 4px;
+  scale: 1.1;
+}
+
 .Footer {
   text-align: center;
   color: rgb(8, 240, 228);
 }
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(0, 183, 255);
+  background-color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.801);
+  max-width: 500px;
+  justify-content: center;
+  align-self: center;
+  position: absolute;
+  text-align: center;
+  width: 500px;
+}
+
+.App-input-username {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+}
+
+.display-aktivnih-korisnika {
+  position: absolute;
+  top: 25vh;
+  padding: 5px 5px;
+  max-width: 10vw;
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+  border-color: rgb(8, 240, 228);
+  border-style: solid;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: rgba(255, 255, 255, 0.801);
+  margin-left: 5px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.form-log-in {
+  display: flex;
+}
+
+.colorpicker {
+  align-self: center;
+  margin: 0px;
+  cursor: pointer;
+  padding: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.input-username {
+  align-self: center;
+  margin: 0px;
+  width: 300px;
+}
+

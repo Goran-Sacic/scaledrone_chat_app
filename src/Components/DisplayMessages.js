@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from 'uuid';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 const randomId = uuidv4();
 
 function DisplayMessages({messages, currentMember}) {
@@ -15,19 +15,19 @@ function DisplayMessages({messages, currentMember}) {
         const { member, text } = message;
         const messageFromMe = member.id === currentMember.id;
         const className = messageFromMe ? "Messages-message currentMember" : "Messages-message";
-
+        
         return (
             <li key={index} className={className}>
                 <span className="avatar" style={{backgroundColor: member.clientData.color}} />
                 <div className="Message-content">
-                    <div className="username">
+                    <div className="username" style={{color: member.clientData.color}}>
                         {member.clientData.username}
                     </div>
-                    <div className="text"><p>{text}</p></div>
+                    <div className="text" style={{color: member.clientData.color}}><p>{text}</p></div>
                 </div>
             </li>
         );
-    };
+    } 
 
     return (
         <ul className="Messages-list">

@@ -18,7 +18,7 @@ export default function Input ({onSendMessage}) {
         <div className="Input">
             <form onSubmit={handleAddPoruka}>
                 <input placeholder="Unesi poruku ..." autoFocus={true} value={text} onChange={handleChange} />
-                <button disabled={!text} className={!text ? "button-disabled" : "button-active"}>Pošalji →</button>
+                <button disabled={!text} className={!text ? "button-disabled" : "button-active"}>Pošalji →</button> 
             </form>
         </div>
     )
